@@ -2,10 +2,10 @@
 let playerSelection;
 let playerPoints = 0;
 let computerPoints = 0;
-const buttons = document.querySelectorAll('.button')
-let playerPointsElement = document.getElementById('player-points')
-let ComputerPointsElement = document.getElementById('computer-points')
-let messageElement = document.getElementById('message')
+const buttons = document.querySelectorAll('.button');
+let playerPointsElement = document.getElementById('player-points');
+let ComputerPointsElement = document.getElementById('computer-points');
+let messageElement = document.getElementById('message');
 let outputMessage;
 
 let getComputerSelection = () => {
@@ -23,7 +23,7 @@ let getComputerSelection = () => {
 
 let compareSelections = (playerSelection, ComputerSelection) => {
   if (playerSelection == ComputerSelection){
-    outputMessage = `computer picked ${ComputerSelection} - it's a draw`
+    outputMessage = `computer picked ${ComputerSelection} - it's a draw`;
   }
   else if ((playerSelection == 'rock' && ComputerSelection == 'paper') || (playerSelection == 'paper' && ComputerSelection == 'scissors') || (playerSelection == 'scissors' && ComputerSelection == 'rock')){
     outputMessage = `computer picked ${ComputerSelection} - You've lost!`;
@@ -38,18 +38,18 @@ let compareSelections = (playerSelection, ComputerSelection) => {
 
 let playGame = () => {
   compareSelections(playerSelection, getComputerSelection())
-  playerPointsElement.textContent = `${playerPoints}`
-  ComputerPointsElement.textContent = `${computerPoints}`
-  messageElement.textContent = `${outputMessage}`
+  playerPointsElement.textContent = `${playerPoints}`;
+  ComputerPointsElement.textContent = `${computerPoints}`;
+  messageElement.textContent = `${outputMessage}`;
 }
 
 let getUserInput = () => {
-  playerSelection = button.id
-  playGame()
+  playerSelection = button.id;
+  playGame();
 }
 
 buttons.forEach(button => {
   button.addEventListener('click', getUserInput = () => {
-    playerSelection = button.id
-    playGame()}) 
+    playerSelection = button.id;
+    playGame();}) 
   });

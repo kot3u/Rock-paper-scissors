@@ -4,4 +4,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #000000;
+}
+
+p {
+  font-size: 50px;
+  color: white;
+}
+
+button {
+  font-size: 50px;
+  margin: 25px;
+  width: 250px;
+  background-color: navy;
+  border-radius: 30px;
+  color: #ffffff;
+}
+
+.point {
+  display: inline-block;
+  margin: 50px;
 }

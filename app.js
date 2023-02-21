@@ -2,7 +2,9 @@
 let playerSelection;
 let playerPoints = 0;
 let computerPoints = 0;
-
+const buttons = document.querySelectorAll('.button')
+let playerPointsElement = document.getElementById('player-points')
+let ComputerPointsElement = document.getElementById('Computer-points')
 
 let getComputerSelection = () => {
   let randomChoice = Math.floor(Math.random()*3);
@@ -31,3 +33,20 @@ let compareSelections = (playerSelection, ComputerSelection) => {
   }
 }
 
+
+let playGame = () => {
+  compareSelections(playerSelection, getComputerSelection())
+  playerPointsElement.textContent = `${playerPoints}`
+  ComputerPointsElement.textContent = `${computerPoints}`
+}
+
+let getUserInput = () => {
+  playerSelection = button.id
+  playGame()
+}
+
+buttons.forEach(button => {
+  button.addEventListener('click', getUserInput = () => {
+    playerSelection = button.id
+    playGame()}) 
+  });

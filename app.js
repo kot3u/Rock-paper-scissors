@@ -1,4 +1,3 @@
-// let rounds = parseInt(prompt('how many rounds do you wish to play'));
 let playerSelection;
 let playerPoints = 0;
 let computerPoints = 0;
@@ -19,7 +18,7 @@ let getComputerSelection = () => {
   else if (randomChoice == 2){
     return 'scissors';
   };
-}
+};
 
 let compareSelections = (playerSelection, ComputerSelection) => {
   if (playerSelection == ComputerSelection){
@@ -32,24 +31,25 @@ let compareSelections = (playerSelection, ComputerSelection) => {
   else if ((playerSelection == 'rock' && ComputerSelection == 'scissors') || (playerSelection == 'paper' && ComputerSelection == 'rock') || (playerSelection == 'scissors' && ComputerSelection == 'paper')){
     outputMessage = `computer picked ${ComputerSelection} - You've won!`;
     ++playerPoints;
-  }
-}
+  };
+};
 
 
 let playGame = () => {
-  compareSelections(playerSelection, getComputerSelection())
+  compareSelections(playerSelection, getComputerSelection());
   playerPointsElement.textContent = `${playerPoints}`;
   ComputerPointsElement.textContent = `${computerPoints}`;
   messageElement.textContent = `${outputMessage}`;
-}
+};
 
 let getUserInput = () => {
   playerSelection = button.id;
   playGame();
-}
+};
 
 buttons.forEach(button => {
   button.addEventListener('click', getUserInput = () => {
     playerSelection = button.id;
-    playGame();}) 
-  });
+    playGame();
+  }); 
+});

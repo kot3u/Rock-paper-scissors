@@ -42,11 +42,6 @@ let playGame = () => {
   messageElement.textContent = `${outputMessage}`;
 };
 
-let getUserInput = () => {
-  playerSelection = button.id;
-  playGame();
-};
-
 buttons.forEach(button => {
   button.addEventListener('click', getUserInput = () => {
     playerSelection = button.id;

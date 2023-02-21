@@ -1,5 +1,5 @@
-let rounds = parseInt(prompt('how many rounds do you wish to play'));
-let playerSelection = prompt('what is your sing').toLowerCase();
+// let rounds = parseInt(prompt('how many rounds do you wish to play'));
+let playerSelection;
 let playerPoints = 0;
 let computerPoints = 0;
 
@@ -31,8 +31,3 @@ let compareSelections = (playerSelection, ComputerSelection) => {
   }
 }
 
-for (i = 1; i <= rounds; ++i){
-  compareSelections(playerSelection, getComputerSelection());
-  alert(`Player points: ${playerPoints} Computer points: ${computerPoints}`)
-  playerSelection = prompt('what is your sing').toLowerCase();
-}
